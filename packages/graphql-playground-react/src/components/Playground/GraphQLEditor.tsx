@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { isNamedType, GraphQLSchema } from 'graphql'
+import { GraphQLSchema, isNamedType } from 'graphql'
 import { List } from 'immutable'
 
 // Query & Response Components
@@ -67,7 +67,7 @@ import {
 } from '../../state/sessions/actions'
 import { ResponseRecord } from '../../state/sessions/reducers'
 import { getDocsOpen } from '../../state/docs/selectors'
-import { changeWidthDocs } from '../../state/docs/actions'
+import { changeWidthDocs, setDocsVisible } from '../../state/docs/actions'
 
 /**
  * The top-level React component for GraphQLEditor, intended to encompass the entire
@@ -79,6 +79,7 @@ export interface Props {
   shareEnabled?: boolean
   fixedEndpoint?: boolean
   schema?: GraphQLSchema
+  setDocsVisible: (sessionId: string, open: boolean, idx?: number | null) => any
 }
 
 export interface ReduxProps {
@@ -425,14 +426,26 @@ class GraphQLEditor extends React.PureComponent<Props & ReduxProps> {
   private handleHintInformationRender = elem => {
     elem.addEventListener('click', this.onClickHintInformation)
 
-    let onRemoveFn
-    elem.addEventListener(
-      'DOMNodeRemoved',
-      (onRemoveFn = () => {
-        elem.removeEventListener('DOMNodeRemoved', onRemoveFn)
-        elem.removeEventListener('click', this.onClickHintInformation)
-      }),
-    )
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        if (!elem) {
+          return
+        }
+
+        if (mutation.removedNodes.length > 0) {
+          for (let i = 0; i < mutation.removedNodes.length; i++) {
+            if (mutation.removedNodes[i] === elem) {
+              elem.removeEventListener('click', this.onClickHintInformation)
+              observer.disconnect()
+            }
+          }
+        }
+      });
+    });
+
+    observer.observe(elem.parentElement, {
+      childList: true,
+    })
   }
 
   private handleResizeStart = downEvent => {
@@ -573,7 +586,12 @@ class GraphQLEditor extends React.PureComponent<Props & ReduxProps> {
         const type = schema.getType(namedTypeName)
 
         if (isNamedType(type)) {
-          this.docExplorerComponent.showDocFromType(type)
+          this.props.setDocsVisible(
+            this.props.sessionId,
+            true,
+            0
+          )
+          this.activeSideTabContent.showDocFromType(type)
         }
       }
     }
@@ -634,6 +652,7 @@ connect<any, any, any>(
     toggleVariables,
     fetchSchema,
     changeWidthDocs,
+    setDocsVisible,
   },
   null,
   {

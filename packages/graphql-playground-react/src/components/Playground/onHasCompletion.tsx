@@ -87,19 +87,29 @@ export default function onHasCompletion(cm, data, onHintInformationRender) {
       // When CodeMirror attempts to remove the hint UI, we detect that it was
       // removed from our wrapper and in turn remove the wrapper from the
       // original container.
-      let onRemoveFn
-      wrapper.addEventListener(
-        'DOMNodeRemoved',
-        (onRemoveFn = event => {
-          if (event.target === hintsUl) {
-            wrapper.removeEventListener('DOMNodeRemoved', onRemoveFn)
-            wrapper.parentNode.removeChild(wrapper)
-            wrapper = null
-            information = null
-            onRemoveFn = null
+      const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          if (!wrapper) {
+            return
           }
-        }),
-      )
+
+          if (mutation.removedNodes.length > 0) {
+            for (let i = 0; i < mutation.removedNodes.length; i++) {
+              if (mutation.removedNodes[i] === hintsUl) {
+                wrapper.removeChild(information)
+                wrapper.parentNode.removeChild(wrapper)
+                wrapper = null
+                information = null
+                deprecation = null
+                observer.disconnect()
+              }
+            }
+        }});
+      });
+
+      observer.observe(wrapper, {
+        childList: true,
+      })
     }
 
     // Now that the UI has been set up, add info to information.
