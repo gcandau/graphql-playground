@@ -97,12 +97,12 @@ const getCdnMarkup = ({ version, cdnUrl = '//cdn.jsdelivr.net/npm', faviconUrl }
   return `
     <link 
       rel="stylesheet" 
-      href="${buildCDNUrl('graphql-playground-react', 'build/static/css/index.css')}"
+      href="${buildCDNUrl('graphql-playground-react-klocel', 'build/static/css/index.css')}"
     />
     ${typeof faviconUrl === 'string' ? `<link rel="shortcut icon" href="${filter(faviconUrl || '')}" />` : ''}
-    ${faviconUrl === undefined ? `<link rel="shortcut icon" href="${buildCDNUrl('graphql-playground-react', 'build/favicon.png')}" />` : ''}
+    ${faviconUrl === undefined ? `<link rel="shortcut icon" href="${buildCDNUrl('graphql-playground-react-klocel', 'build/favicon.png')}" />` : ''}
     <script 
-      src="${buildCDNUrl('graphql-playground-react', 'build/static/js/middleware.js')}"
+      src="${buildCDNUrl('graphql-playground-react-klocel', 'build/static/js/middleware.js')}"
     ></script>
 `}
 

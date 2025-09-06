@@ -5,7 +5,7 @@ set -e
 cd packages
 
 packages=(
-  graphql-playground-react
+  graphql-playground-react-klocel
   graphql-playground-html
   graphql-playground-electron
   graphql-playground-middleware-express

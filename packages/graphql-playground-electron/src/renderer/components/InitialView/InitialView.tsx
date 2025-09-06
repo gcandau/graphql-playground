@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 import * as format from 'date-fns/format'
 import Toggle from './Toggle'
 import { examples } from './data'
-import { getAppHistory, AppHistoryItem } from 'graphql-playground-react'
+import { getAppHistory, AppHistoryItem } from 'graphql-playground-react-klocel'
 import { createStructuredSelector, createSelector } from 'reselect'
 import { OrderedMap } from 'immutable'
 

@@ -6,7 +6,7 @@ cd packages
 
 packages=(
   graphql-playground-html
-  graphql-playground-react
+  graphql-playground-react-klocel
   # graphql-playground-electron
   graphql-playground-middleware-express
   graphql-playground-middleware-hapi

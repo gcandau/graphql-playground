@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.7.27](https://github.com/graphcool/graphql-playground/compare/graphql-playground-react@1.7.26...graphql-playground-react@1.7.27) (2020-10-20)
+## [1.7.27](https://github.com/graphcool/graphql-playground/compare/graphql-playground-react-klocel@1.7.26...graphql-playground-react-klocel@1.7.27) (2020-10-20)
 
 
 ### Bug Fixes
@@ -14,15 +14,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.7.26](https://github.com/graphcool/graphql-playground/compare/graphql-playground-react@1.7.24...graphql-playground-react@1.7.26) (2020-08-30)
+## [1.7.26](https://github.com/graphcool/graphql-playground/compare/graphql-playground-react-klocel@1.7.24...graphql-playground-react-klocel@1.7.26) (2020-08-30)
 
-**Note:** Version bump only for package graphql-playground-react
-
-
+**Note:** Version bump only for package graphql-playground-react-klocel
 
 
 
-## [1.7.24](https://github.com/graphcool/graphql-playground/compare/graphql-playground-react@1.7.23...graphql-playground-react@1.7.24) (2020-08-30)
+
+
+## [1.7.24](https://github.com/graphcool/graphql-playground/compare/graphql-playground-react-klocel@1.7.23...graphql-playground-react-klocel@1.7.24) (2020-08-30)
 
 
 ### Bug Fixes
@@ -42,7 +42,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * 'false' into a non-boolean attribute 'color' ([#1003](https://github.com/graphcool/graphql-playground/issues/1003)) ([1613643](https://github.com/graphcool/graphql-playground/commit/16136437270c1943ff9d7ce57ff58368dcebbc59))
 * allow results to fill the entire pane horizontally ([#1142](https://github.com/graphcool/graphql-playground/issues/1142)) ([d418b02](https://github.com/graphcool/graphql-playground/commit/d418b026dc98f008c2af4403b00ac2247078e838))
 * Allow scroll in result panel ([#1023](https://github.com/graphcool/graphql-playground/issues/1023)) ([8ee2f40](https://github.com/graphcool/graphql-playground/commit/8ee2f40ce10736c763b4bbc1d3476611e71dff1f))
-* graphql-playground -> graphql-playground-react ([#1210](https://github.com/graphcool/graphql-playground/issues/1210)) ([462cfdd](https://github.com/graphcool/graphql-playground/commit/462cfddc11a5c132dbb0bc460614529ff265a247))
+* graphql-playground -> graphql-playground-react-klocel ([#1210](https://github.com/graphcool/graphql-playground/issues/1210)) ([462cfdd](https://github.com/graphcool/graphql-playground/commit/462cfddc11a5c132dbb0bc460614529ff265a247))
 * hapi and koa mws for next release ([#1217](https://github.com/graphcool/graphql-playground/issues/1217)) ([40c35fc](https://github.com/graphcool/graphql-playground/commit/40c35fc4c73b939d002c9d2dff51eed5dd0b6aa9))
 * not showing deprecated fields on root level ([#995](https://github.com/graphcool/graphql-playground/issues/995)) ([2c33ecb](https://github.com/graphcool/graphql-playground/commit/2c33ecb1935725ad5347b38f61527e25ad9379a9))
 * Removed unnecessary } ([#1104](https://github.com/graphcool/graphql-playground/issues/1104)) ([6745aff](https://github.com/graphcool/graphql-playground/commit/6745aff4d945b9c107582a776f2ad5300518fc26))
@@ -50,11 +50,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * workaround for bug in SettingsEditor ([#1198](https://github.com/graphcool/graphql-playground/issues/1198)) ([02fff61](https://github.com/graphcool/graphql-playground/commit/02fff61f7872cc91f2fc026fd925f7af579d9e66))
 * X-Apollo-Tracing No Schema Issue ([#1112](https://github.com/graphcool/graphql-playground/issues/1112)) ([1ca035d](https://github.com/graphcool/graphql-playground/commit/1ca035d06f71cbe02aa8f36e7fce2095c2854ba6))
 * **deps:** [security] bump handlebars ([ba1fb9d](https://github.com/graphcool/graphql-playground/commit/ba1fb9d56e20806cf759d40abfe4b455993d1d13))
-* **deps:** [security] bump lodash in /packages/graphql-playground-react ([27c5368](https://github.com/graphcool/graphql-playground/commit/27c536825d89d112504109205fd2a111ab9c5c40))
+* **deps:** [security] bump lodash in /packages/graphql-playground-react-klocel ([27c5368](https://github.com/graphcool/graphql-playground/commit/27c536825d89d112504109205fd2a111ab9c5c40))
 * **deps:** [security] bump react-dom ([a79c05e](https://github.com/graphcool/graphql-playground/commit/a79c05e49d937a1319a206c14e394a92a014e1de))
 * **deps:** update deps and toolchain, move back to using yarn… ([#1191](https://github.com/graphcool/graphql-playground/issues/1191)) ([824c7a5](https://github.com/graphcool/graphql-playground/commit/824c7a57f0284f022726a8b8840aafc3e8720ccd))
-* **graphql-playground-react:** prevent selection of text ([#998](https://github.com/graphcool/graphql-playground/issues/998)) ([4482f5d](https://github.com/graphcool/graphql-playground/commit/4482f5d0faa656ad2b0ea1a54fea9bccb71b619a))
-* **graphql-playground-react:** Remove internal scrollbars for subscription results ([#986](https://github.com/graphcool/graphql-playground/issues/986)) ([fc871b6](https://github.com/graphcool/graphql-playground/commit/fc871b6b021a07664f2fd57d91f72693d8af8d3a))
+* **graphql-playground-react-klocel:** prevent selection of text ([#998](https://github.com/graphcool/graphql-playground/issues/998)) ([4482f5d](https://github.com/graphcool/graphql-playground/commit/4482f5d0faa656ad2b0ea1a54fea9bccb71b619a))
+* **graphql-playground-react-klocel:** Remove internal scrollbars for subscription results ([#986](https://github.com/graphcool/graphql-playground/issues/986)) ([fc871b6](https://github.com/graphcool/graphql-playground/commit/fc871b6b021a07664f2fd57d91f72693d8af8d3a))
 
 
 ### Features
@@ -193,9 +193,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * **build:** Fix build, temporarily disable yarn workspace, update graphcool-styles & graphcool-ui de ([af501d7](https://github.com/graphcool/graphql-playground/commit/af501d7a754a14dbacc76439a77434f892828482))
 * **curl:** Fixed curl command generation ([0eb2492](https://github.com/graphcool/graphql-playground/commit/0eb2492545d8c58de80eb8e435840e3fadc144b2)), closes [#333](https://github.com/graphcool/graphql-playground/issues/333)
-* **graphql-playground-react:** Fix variable editor ([90af813](https://github.com/graphcool/graphql-playground/commit/90af8135be85b7088799c17e4f0b2994dcf2abb5)), closes [#372](https://github.com/graphcool/graphql-playground/issues/372)
-* **graphql-playground-react:** Replaced triangle Icon component with React SVG component ([0ef92d0](https://github.com/graphcool/graphql-playground/commit/0ef92d02e10493726a368de5000589bd6e1a0d28))
-* **graphql-playground-react:** Selected tab index is now properly persisted ([802b62e](https://github.com/graphcool/graphql-playground/commit/802b62e53a457ed10db5e39b3f7f7d4aa211d0bb))
+* **graphql-playground-react-klocel:** Fix variable editor ([90af813](https://github.com/graphcool/graphql-playground/commit/90af8135be85b7088799c17e4f0b2994dcf2abb5)), closes [#372](https://github.com/graphcool/graphql-playground/issues/372)
+* **graphql-playground-react-klocel:** Replaced triangle Icon component with React SVG component ([0ef92d0](https://github.com/graphcool/graphql-playground/commit/0ef92d02e10493726a368de5000589bd6e1a0d28))
+* **graphql-playground-react-klocel:** Selected tab index is now properly persisted ([802b62e](https://github.com/graphcool/graphql-playground/commit/802b62e53a457ed10db5e39b3f7f7d4aa211d0bb))
 * **GraphQLEditor:** init state.isReloadingSchema to false ([b59c6e6](https://github.com/graphcool/graphql-playground/commit/b59c6e65725540ef19ded88e677070ab0f8db945))
 * **PlaygroundStorage:** Fix deserialization defaullt ([6766bb0](https://github.com/graphcool/graphql-playground/commit/6766bb001d98d4f131ac71c9bb07804891a7d287))
 * **react:** fix subscription payload ([b432655](https://github.com/graphcool/graphql-playground/commit/b4326555c84d90b96e10bad5cf5a0c826b4e500f))
@@ -208,7 +208,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **graphql-playground-react:** added spinner for schema fetching ([24072cb](https://github.com/graphcool/graphql-playground/commit/24072cbd1d332fff402c4a829cfa25784f982f32))
+* **graphql-playground-react-klocel:** added spinner for schema fetching ([24072cb](https://github.com/graphcool/graphql-playground/commit/24072cbd1d332fff402c4a829cfa25784f982f32))
 * **TopBar:** animate the icon when reloading schema ([9a4cb0a](https://github.com/graphcool/graphql-playground/commit/9a4cb0a587cae09cdfbe8781eef8ad3f92fbc3cd))
 * **TopBar:** notify the user when reloading the schema fails ([4df1da3](https://github.com/graphcool/graphql-playground/commit/4df1da30e6cbbc23510fbb6c36928e9e28cf3f08))
 

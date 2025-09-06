@@ -1,6 +1,6 @@
 <p align="center"><img src="https://imgur.com/5fzMbyV.png" width="269"></p>
 
-[![npm version](https://badge.fury.io/js/graphql-playground-react.svg)](https://badge.fury.io/js/graphql-playground-react)
+[![npm version](https://badge.fury.io/js/graphql-playground-react-klocel.svg)](https://badge.fury.io/js/graphql-playground-react-klocel)
 [![graphql](https://circleci.com/gh/graphql/graphql-playground.svg?style=shield)](https://circleci.com/gh/graphql/graphql-playground)
 
 > **SECURITY WARNING:** both `graphql-playground-html` and [all four (4) of it's middleware dependents](#impacted-packages) until `graphql-playground-html@1.6.22` were subject to an  **XSS Reflection attack vulnerability only to unsanitized user input strings** to the functions therein. This was resolved in `graphql-playground-html@^1.6.22`. [More Information](#security-details) [CVE-2020-4038](https://github.com/graphql/graphql-playground/security/advisories/GHSA-4852-vrh7-28rf)
@@ -57,7 +57,7 @@ Common examples may be user-defined path parameters, query string, unsanitized U
 - `graphql-playground-hapi` **☔ safe** @ `1.6.13`
 - `graphql-playground-lambda` **☔ safe** @ `1.7.17`
 - `graphql-playground-electron` has always been **☔ safe** from XSS attacks! This is because configuration is statically defined [it's webpack config](https://github.com/prisma-labs/graphql-playground/blob/main/packages/graphql-playground-electron/webpack.config.build.js#L16)
-- `graphql-playground-react` is safe because it does not use `renderPlaygroundPage()` anywhere, and thus is not susceptible to template string XSS reflection attacks.
+- `graphql-playground-react-klocel` is safe because it does not use `renderPlaygroundPage()` anywhere, and thus is not susceptible to template string XSS reflection attacks.
 
 ### More Information
 
@@ -133,7 +133,7 @@ The React component `<Playground />` and all middlewares expose the following op
   - `endpoint` [`string`](optional) - the GraphQL endpoint url.
   - `subscriptionEndpoint` [`string`](optional) - the GraphQL subscriptions endpoint url.
   - `workspaceName` [`string`](optional) - in case you provide a GraphQL Config, you can name your workspace here
-  - `config` [`string`](optional) - the JSON of a GraphQL Config. See an example [here](https://github.com/prismagraphql/graphql-playground/blob/main/packages/graphql-playground-react/src/localDevIndex.tsx#L47)
+  - `config` [`string`](optional) - the JSON of a GraphQL Config. See an example [here](https://github.com/prismagraphql/graphql-playground/blob/main/packages/graphql-playground-react-klocel/src/localDevIndex.tsx#L47)
   - `settings` [`ISettings`](optional) - Editor settings in json format as [described here](https://github.com/prismagraphql/graphql-playground#settings)
 
 ```ts
@@ -186,20 +186,20 @@ If you simply want to render the Playground HTML on your own, for example when i
 1.  [The bare minimum HTML needed to render the Playground](https://github.com/prismagraphql/graphql-playground/blob/main/packages/graphql-playground-html/minimal.html)
 2.  [The Playground HTML with full loading animation](https://github.com/prismagraphql/graphql-playground/blob/main/packages/graphql-playground-html/withAnimation.html)
 
-Note: In case you do not want to serve assets from a CDN (like jsDelivr) and instead use a local copy, you will need to install `graphql-playground-react` from npm, and then replace all instances of `//cdn.jsdelivr.net/npm` with `./node_modules`. An example can be found [here](https://github.com/prismagraphql/graphql-playground/blob/main/packages/graphql-playground-html/minimalWithoutCDN.html)
+Note: In case you do not want to serve assets from a CDN (like jsDelivr) and instead use a local copy, you will need to install `graphql-playground-react-klocel` from npm, and then replace all instances of `//cdn.jsdelivr.net/npm` with `./node_modules`. An example can be found [here](https://github.com/prismagraphql/graphql-playground/blob/main/packages/graphql-playground-html/minimalWithoutCDN.html)
 
 ### As React Component
 
 #### Install
 
 ```sh
-yarn add graphql-playground-react
+yarn add graphql-playground-react-klocel
 ```
 
 #### Use
 
 GraphQL Playground provides a React component responsible for rendering the UI and Session management.
-There are **3 dependencies** needed in order to run the `graphql-playground-react` React component.
+There are **3 dependencies** needed in order to run the `graphql-playground-react-klocel` React component.
 
 1.  _Open Sans_ and _Source Code Pro_ fonts
 2.  Rendering the `<Playground />` component
@@ -221,7 +221,7 @@ Including stylesheet and the component (`2., 3.`)
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { Playground, store } from 'graphql-playground-react'
+import { Playground, store } from 'graphql-playground-react-klocel'
 
 ReactDOM.render(
   <Provider store={store}>
@@ -315,7 +315,7 @@ There is an [XSS Reflection Vulnerability](./SECURITY.md) when using these middl
 ## Development
 
 ```sh
-$ cd packages/graphql-playground-react
+$ cd packages/graphql-playground-react-klocel
 $ yarn
 $ yarn start
 ```
@@ -335,7 +335,7 @@ If your company benefits from GraphQL and you would like to provide essential fi
 
 ## Custom Theme
 
-From `graphql-playground-react@1.7.0` on you can provide a `codeTheme` property to the React Component to customize your color theme.
+From `graphql-playground-react-klocel@1.7.0` on you can provide a `codeTheme` property to the React Component to customize your color theme.
 These are the available options:
 
 ```ts
@@ -372,13 +372,13 @@ This is repository is a "mono repo" and contains multiple packages using [Yarn w
 
 In the folder `packages` you'll find the following packages:
 
-- `graphql-playground-electron`: Cross-platform electron app which uses `graphql-playground-react`
-- `graphql-playground-html`: Simple HTML page rendering a version of `graphql-playground-react` hosted on JSDeliver
+- `graphql-playground-electron`: Cross-platform electron app which uses `graphql-playground-react-klocel`
+- `graphql-playground-html`: Simple HTML page rendering a version of `graphql-playground-react-klocel` hosted on JSDeliver
 - `graphql-playground-middleware-express`: Express middleware using `graphql-playground-html`
 - `graphql-playground-middleware-hapi`: Hapi middleware using `graphql-playground-html`
 - `graphql-playground-middleware-koa`: Koa middleware using `graphql-playground-html`
 - `graphql-playground-middleware-lambda`: AWS Lambda middleware using `graphql-playground-html`
-- `graphql-playground-react`: Core of GraphQL Playground built with ReactJS
+- `graphql-playground-react-klocel`: Core of GraphQL Playground built with ReactJS
 
 <a name="help-and-community" />
 

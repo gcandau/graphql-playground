@@ -3,7 +3,7 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import { remote, ipcRenderer, webFrame } from 'electron'
 import * as cx from 'classnames'
-import { Playground as IPlayground } from 'graphql-playground-react/lib/components/Playground'
+import { Playground as IPlayground } from 'graphql-playground-react-klocel/lib/components/Playground'
 import { merge, set } from 'immutable'
 import Playground, {
   openSettingsTab,
@@ -19,7 +19,7 @@ import Playground, {
   getEndpoint,
   selectAppHistoryItem,
   AppHistoryItem,
-} from 'graphql-playground-react'
+} from 'graphql-playground-react-klocel'
 import {
   getGraphQLConfig,
   findGraphQLConfigFile,
